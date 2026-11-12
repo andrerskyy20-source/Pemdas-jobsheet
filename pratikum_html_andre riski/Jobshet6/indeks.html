@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kopi Nusa: biji kopi sangrai segar dari petani lokal Indonesia.">
+  <title>Kopi Nusa | Biji Kopi Sangrai Segar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md sticky-top navbar-nusa" aria-label="Navigasi utama">
+      <div class="container">
+        <a class="navbar-brand brand-name" href="#beranda">Kopi Nusa</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuUtama"
+                aria-controls="menuUtama" aria-expanded="false" aria-label="Buka menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuUtama">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="#produk">Produk</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tentang">Tentang kami</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+          </ul>
+          <div class="d-flex gap-2 align-items-center">
+            <button id="darkModeToggle" class="btn btn-outline-dark btn-sm" type="button">Mode Gelap</button>
+            <button id="cartButton" class="btn btn-warning btn-sm position-relative" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-controls="cartPanel">
+              Keranjang
+              <span id="cartBadge" class="badge text-bg-dark ms-1">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="beranda" class="hero py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-7">
+            <h1 class="display-4 hero-title">Kopi disangrai minggu ini, sampai di rumah minggu ini.</h1>
+            <p class="lead hero-text">Biji pilihan dari petani Gayo, Toraja, Flores, dan Kintamani. Dipanggang dalam batch kecil, dikirim maksimal tiga hari setelah sangrai.</p>
+            <a href="#produk" class="btn btn-warning btn-lg">Lihat produk</a>
+          </div>
+          <div class="col-12 col-lg-5">
+            <img class="img-fluid rounded-4 hero-img" alt="Biji kopi sangrai dalam karung goni"
+                 src="https://placehold.co/640x480/0F3D3E/F2B705?text=Kopi+Nusa">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="produk" class="py-5">
+      <div class="container">
+        <h2 class="section-title mb-3">Pilih kopimu</h2>
+
+        <div class="row g-2 mb-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <label for="searchInput" class="form-label visually-hidden">Cari produk</label>
+            <input id="searchInput" type="search" class="form-control" placeholder="Cari nama kopi atau daerah">
+          </div>
+          <div class="col-12 col-md-6 col-lg-8">
+            <div id="filterGroup" class="btn-group flex-wrap" role="group" aria-label="Filter kategori">
+              <button type="button" class="btn btn-outline-secondary active" data-category="semua">Semua</button>
+              <button type="button" class="btn btn-outline-secondary" data-category="arabika">Arabika</button>
+              <button type="button" class="btn btn-outline-secondary" data-category="robusta">Robusta</button>
+              <button type="button" class="btn btn-outline-secondary" data-category="blend">Blend</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="productGrid" class="row g-4"></div>
+        <p id="emptyMessage" class="text-center text-body-secondary py-5 d-none">Tidak ada kopi yang cocok. Coba kata kunci lain atau pilih kategori Semua.</p>
+      </div>
+    </section>
+
+    <section id="tentang" class="py-5 section-alt">
+      <div class="container">
+        <div class="row g-4">
+          <article class="col-12 col-md-4">
+            <h3 class="h5">Langsung dari petani</h3>
+            <p>Kami membeli biji dari koperasi petani dengan harga di atas pasar.</p>
+          </article>
+          <article class="col-12 col-md-4">
+            <h3 class="h5">Sangrai batch kecil</h3>
+            <p>Setiap batch maksimal 5 kg supaya rasa konsisten dan segar.</p>
+          </article>
+          <article class="col-12 col-md-4">
+            <h3 class="h5">Giling sesuai alat</h3>
+            <p>Tulis alat seduhmu di catatan pesanan dan kami giling sesuai kebutuhan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <h2 class="section-title mb-3">Tanya kami</h2>
+            <div id="alertNotification"></div>
+            <form id="contactForm" novalidate>
+              <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="nama@email.com">
+              </div>
+              <div class="mb-3">
+                <label for="inputPesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="inputPesan" rows="4"></textarea>
+              </div>
+              <button type="submit" class="btn btn-dark">Kirim pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 footer-nusa">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <p class="mb-0">&copy; 2026 Kopi Nusa. Proyek akhir Pemrograman Web.</p>
+      <p class="mb-0">Jakarta, Indonesia</p>
+    </div>
+  </footer>
+
+  <aside class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel" aria-labelledby="cartTitle">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title h5" id="cartTitle">Keranjang belanja</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tutup"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul id="cartList" class="list-group list-group-flush flex-grow-1"></ul>
+      <div class="border-top pt-3">
+        <p class="d-flex justify-content-between fw-semibold fs-5">
+          <span>Total</span><span id="cartTotal">Rp0</span>
+        </p>
+        <button id="clearCart" class="btn btn-outline-danger w-100" type="button">Kosongkan keranjang</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="javascript.js"></script>
+</body>
+</html>

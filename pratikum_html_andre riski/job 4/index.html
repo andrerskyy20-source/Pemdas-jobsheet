@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Interaktif JavaScript - X RPL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="web-header">
+            <h1>Dasbor Interaktif Siswa</h1>
+            <button id="btn-togle" class="toggle-theme">Mode Gelap</button>
+        </header>
+
+        <section class="widget-card">
+            <h2>Kalkulator Nilai Pemrograman</h2>
+            <p>Masukkan nilai ujian Anda di bawah ini untuk memeriksa status kelulusan otomatis.</p>
+            <div class="input-group">
+                <label for="input-nama">Nama Lengkap:</label>
+                <input type="text" id="input-nama" placeholder="Contoh: Budi Santoso">
+            </div>
+            <div class="input-group">
+                <label for="input-nilai">Nilai Ujian (0 - 100):</label>
+                <input type="number" id="input-nilai" placeholder="Contoh: 80">
+            </div>
+            <button id="btn-proses" class="action-btn">Proses Data Nilai</button>
+            <div id="box-hasil" class="result-box">
+                Status kelulusan Anda akan dimunculkan di sini secara dinamis.
+            </div>
+        </section>
+        <section class="widget-card">
+            <h2>Pembangkit Teks Berulang (Looping Generator)</h2>
+            <button id="btn-loop" class="action-btn variant-btn">Jalankan Perulangan Logika</button>
+            <div id="box-loop" class="result-box">
+                Hasil cetak deret angka perulangan akan tampil di sini.
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

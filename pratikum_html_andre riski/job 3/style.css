@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background-color: #f4f7f6;
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+}
+
+.cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cv-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.cv-card {
+    background-color: #ffffff;
+    padding: 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-item {
+    flex: 1;
+    min-width: 120px;
+    background-color: #e3faf2;
+    color: #0ca678;
+    font-weight: 600;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .skills-container {
+        flex-direction: column;
+    }
+    body {
+        padding: 10px;
+    }
+    .cv-card {
+        padding: 15px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #f5f5f5;
+    }
+    .cv-card {
+        background-color: #2d2d2d;
+        border-color: #404040;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .cv-header h1 {
+        color: #ffffff;
+    }
+}
+
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #ffffff;            
+}
+
+body.dark-theme .cv-card {
+    background-color: #2d2d2d;
+    border-color: #444444;
+}
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme p,
+body.dark-theme .main-title,
+body.dark-theme .desc-text,
+body.dark-theme .item-title,
+body.dark-theme .item-desc,
+body.dark-theme .section-title,
+body.dark-theme .section-subtitle,
+body.dark-theme .contact-text {
+    color: #ffffff !important; 
+}
+
+body.dark-theme .section-title {
+    border-bottom: 2px solid #444444; 
+}
+
+body.dark-theme .item-date {
+    color: #cccccc !important; 
+}
+
+body.dark-theme .skill-item {
+    background-color: #1e3d37; 
+}
+
+body.dark-theme .skill-name {
+    color: #12b886 !important; 
+}
+
+body.dark-theme .skill-desc {
+    color: #e0e0e0 !important; 
+}
+
+body.dark-theme .btn-toggle {
+    background-color: #f4f7f6;
+    color: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+    body:not(.light-theme) {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+    body:not(.light-theme) .cv-card {
+        background-color: #2d2d2d;
+        border-color: #444444;
+    }
+    body:not(.light-theme) h1,
+    body:not(.light-theme) h2,
+    body:not(.light-theme) h3,
+    body:not(.light-theme) h4,
+    body:not(.light-theme) p,
+    body:not(.light-theme) .main-title,
+    body:not(.light-theme) .desc-text,
+    body:not(.light-theme) .item-title,
+    body:not(.light-theme) .item-desc,
+    body:not(.light-theme) .section-title,
+    body:not(.light-theme) .section-subtitle,
+    body:not(.light-theme) .contact-text {
+        color: #ffffff !important;
+    }
+    body:not(.light-theme) .section-title {
+        border-bottom: 2px solid #444444;
+    }
+    body:not(.light-theme) .item-date {
+        color: #cccccc !important;
+    }
+    body:not(.light-theme) .skill-item {
+        background-color: #1e3d37;
+    }
+    body:not(.light-theme) .skill-name {
+        color: #12b886 !important;
+    }
+    body:not(.light-theme) .skill-desc {
+        color: #e0e0e0 !important;
+    }
+    body:not(.light-theme) .btn-toggle {
+        background-color: #f4f7f6;
+        color: #1a1a1a;
+    }
+}

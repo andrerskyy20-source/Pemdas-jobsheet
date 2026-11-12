@@ -1,0 +1,56 @@
+body {
+    background-color: #f8fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e293b;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.dark-theme {
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+.main-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.web-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 15px;
+}
+.toggle-theme {
+    background-color: #334155;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.widget-card {
+    background-color: #ffffff;
+    padding: 24px;
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+body.dark-theme .widget-card {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+.input-group { margin-bottom: 15px; }
+.input-group label { display: block; margin-bottom: 6px; font-weight: 600; }
+.input-group input { width: 95%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; }
+body.dark-theme .input-group input { background-color: #334155; color: white; border-color: #475569; }
+.action-btn { background-color: #2563eb; color: white; border: none; padding: 12px 20px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer; width: 100%; margin-bottom: 15px; }
+.action-btn:hover { background-color: #1d4ed8; }
+.variant-btn { background-color: #0d9488; }
+.variant-btn:hover { background-color: #0f766e; }
+.result-box { background-color: #f1f5f9; padding: 15px; border-radius: 6px; border-left: 4px solid #94a3b8; font-style: italic; min-height: 20px; }
+body.dark-theme .result-box { background-color: #334155; border-left-color: #64748b; }

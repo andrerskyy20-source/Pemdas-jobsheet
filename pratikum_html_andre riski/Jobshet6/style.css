@@ -1,0 +1,39 @@
+:root {
+  --nusa-green: #1bb3b3;
+  --nusa-gold: #F2B705;
+  --nusa-paper: #F6F8F7;
+}
+body { font-family: 'Inter', system-ui, sans-serif; }
+h1, h2, .brand-name { font-family: 'Fraunces', Georgia, serif; font-weight: 700; }
+html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
+ 
+.navbar-nusa { background: var(--nusa-paper); border-bottom: 1px solid rgba(15, 61, 62, .15); }
+.brand-name { color: var(--nusa-green); font-size: 1.4rem; }
+ 
+.hero { background: var(--nusa-green); color: #fff; }
+.hero-title { max-width: 18ch; }
+.hero-text { color: #d6e4e2; max-width: 52ch; }
+.hero-img { width: 100%; object-fit: cover; }
+ 
+.section-title { color: var(--nusa-green); }
+.section-alt { background: var(--nusa-paper); }
+ 
+.product-card { transition: transform .2s ease, box-shadow .2s ease; }
+.product-card:hover { transform: translateY(-4px); box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .12); }
+.product-card img { aspect-ratio: 4 / 3; object-fit: cover; }
+.product-price { font-weight: 600; color: var(--nusa-green); }
+ 
+/* Mode gelap */
+[data-bs-theme="dark"] .navbar-nusa,
+[data-bs-theme="dark"] .section-alt { background: #14201f; border-color: #26403f; }
+[data-bs-theme="dark"] .brand-name,
+[data-bs-theme="dark"] .section-title,
+[data-bs-theme="dark"] .product-price { color: var(--nusa-gold); }
+ 
+.footer-nusa { background: var(--nusa-green); color: #d6e4e2; }
+ 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .product-card { transition: none; }
+}
+ 
